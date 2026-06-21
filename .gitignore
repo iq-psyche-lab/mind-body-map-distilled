@@ -1,0 +1,161 @@
+# =============================================================================
+# Mind–Body Map Distilled — .gitignore  (Psyche L0)
+# =============================================================================
+
+# ── Python ──────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.pyd
+
+# Distribution / Packaging
+.Python
+build/
+dist/
+eggs/
+.eggs/
+*.egg-info/
+*.egg
+MANIFEST
+sdist/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# ── Jupyter Notebook ─────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+profile_default/
+ipython_config.py
+
+# ── NumPy / 그래프 cache ─────────────────────────────────────────────────────
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.joblib
+
+# ── 논변 지도·시각화 산출물 ──────────────────────────────────────────────────
+# 입장 비교 레이더, 논변 흐름도, 층위 매핑, 예측 비교표의 직렬화 결과
+argument_maps/
+position_radars/
+layer_mappings/
+prediction_tables/
+*.graphml
+
+# ── 시각화 outputs ───────────────────────────────────────────────────────────
+# 생성된 그림 (각 챕터)
+# Ch1: 설명의 화살 · 쉬운/어려운 문제 · 범주 오류 · 층위 다이어그램
+# Ch2: 상호작용 문제 · 수반 도식 · 이원론 계보
+# Ch3: 좀비 논변 흐름도 · 메리의 방 · 역전 감각질 · 현상 개념
+# Ch4: 다중 실현 · 중국어 방 · 기능주의 성공/한계 경계
+# Ch5: 범심론 구조 · 결합 문제 분해 · 중립적 일원론 계보
+# Ch6: 간극의 좌표 · 환원/비환원/신비주의 비용 매트릭스
+# Ch7: 입장 비교 레이더 · L0~L6 매핑 · 입장×증거 예측표
+*.png
+*.jpg
+*.jpeg
+*.svg
+*.pdf
+*.gif
+*.mp4
+
+# 결과 / 로그
+results/
+outputs/
+logs/
+runs/
+*.log
+*.csv
+*.tsv
+
+# ── IDE / Editor ─────────────────────────────────────────────────────────────
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+*.code-workspace
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+.directory
+
+# ── Documentation build ──────────────────────────────────────────────────────
+docs/_build/
+docs/generated/
+site/
+.mkdocs_cache/
+
+# ── LaTeX / 수식 PDF 빌드 ────────────────────────────────────────────────────
+# 일부 문서가 .tex 로 논증·형식화 수식 export 하는 경우 대비
+*.aux
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.out
+*.bbl
+*.blg
+*.dvi
+*.lof
+*.lot
+
+# ── Secrets / Credentials ────────────────────────────────────────────────────
+.env.local
+.env.*.local
+secrets.py
+credentials.json
+*.pem
+*.key
+
+# ── Test / lint cache ────────────────────────────────────────────────────────
+.hypothesis/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# data/ 디렉토리 (참조 자료 보존)
+data/
+datasets/
+raw/
+processed/
+!data/.gitkeep
